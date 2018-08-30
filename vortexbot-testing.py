@@ -1,7 +1,7 @@
 import discord
 import asyncio
 import requests
-from bs4 import BeautifulSoap
+from bs4 import BeautifulSoup
 import json
 import os
 
