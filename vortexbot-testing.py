@@ -51,8 +51,11 @@ async def on_ready():
     info = json.loads(third)
     
     if (int(info[str_key_1][str_key_2]) > 0) and (str_key_4 in info[str_key_1][str_key_3]):
-      print("Sent")
-      await bot.send_message(bot.get_server(vortex_server_id).get_member(vortex_user_id), str_message_1.format(str(info[str_key_1][str_key_2])))
+      try:
+       await bot.send_message(bot.get_server(vortex_server_id).get_member(vortex_user_id), str_message_1.format(str(info[str_key_1][str_key_2])))
+       print("Sent")
+      except Exception:
+       pass
 
 
 bot.run(token)
